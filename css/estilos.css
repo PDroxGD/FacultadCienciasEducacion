@@ -73,17 +73,12 @@ body {
 
 /* Banner de la página */
 .banner {
-  width: 100%;
-  height: 400px;
-  background-color: #ffffff; /* Color de fondo para el banner */
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  font-weight: bold;
-  color: #003595;
-}
+  width: 1900px;
+  height: 500px;
+  background-image: url('img/fondo_baner.jpeg');
+  background-size: cover;
+  background-position: center;
+} 
 
 /* Estilo para el contenido de las noticias */
 .historial-noticias{
@@ -98,8 +93,8 @@ body {
 }
 
 .noticia {
-  width: 290px;
-  height: 230px;
+  width: 25%;
+  max-height: 350px;
   background-color: #f1ebd5;
   padding: 10px;
   display: flex;
@@ -110,17 +105,34 @@ body {
 }
 
 .noticia img {
-  width: 250px;
-  height: 150px;
+  width: 75%;
+  height: 50%;
   margin-bottom: 20px;
 }
 
 .texto-noticia {
-  width: 220px;
-  height: 100px;
+  width: 75%;
+  height: 50%;
   background-color: #d6cfb1;
   padding: 10px;
   overflow-y: auto;
+}
+.texto-noticia p:nth-child(1){
+font-weight: 600;
+}
+
+.texto-noticia a{
+  color: #FFFFFF;
+  text-decoration: none;
+  background-color: #1d71b8;
+  border-radius: 80px;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+.texto-noticia a:hover{
+cursor: pointer;
+background-color: #175a92;
 }
 
 /* Sección de Oferta Educativa */
@@ -173,3 +185,35 @@ footer img:nth-child(1){
 footer img:nth-child(3){
     right: 0;
 }
+
+.video-container {
+  display: flex;
+  justify-content: center;  /* Centra el video horizontalmente */
+  align-items: center;      /* Centra el video verticalmente */
+}
+
+iframe {
+  width: 560px;   /* Ancho del video */
+  height: 315px;  /* Alto del video */
+  max-width: 90%; /* Asegura que el video no sea demasiado grande en pantallas más pequeñas */
+  max-height: 80%; /* Limita la altura del video */
+}
+
+.btn {
+  color: #FFFFFF; 
+  text-decoration: none; 
+  background-color: #b89d2b; 
+  border-radius: 80px; 
+  padding: 10px 20px; 
+  display: inline-block; 
+  transition: all 0.3s ease-in-out; 
+}
+/* Efecto cuando el enlace se pasa por encima (hover) */
+.btn:hover {
+  background-color: #ad9716; 
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: translateY(5px); 
+  }
