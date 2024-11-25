@@ -257,6 +257,7 @@ iframe {
 
 #menuToggle {
   margin-top: 100px;
+  display: none;
 }
 
 #checkbox {
@@ -445,5 +446,9 @@ iframe {
   .texto-noticia a {
     padding: 5px 10px;
     font-size: xx-small;
+  }
+
+  #menuToggle {
+    display: block;
   }
 }
