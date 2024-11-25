@@ -14,14 +14,14 @@
     <div class="bannertitulo">
         <div class="container">
             <div class="row">             
-                <img src="css/img/logo_uas.webp" alt="Logo universidad autónoma de sinaloa" height="150">
+                <img src="css/img/logo_uas.webp" alt="Logo universidad autónoma de sinaloa" height="150" class="imgUAS">
     
                 <div class="titulo">
                     Facultad de Ciencias de la Educación <br>Extensión Mochis               
                 </div>
     
-                <img src="css/img/logo_fce.png" alt = "Logo de la facultad de ciencias de la educación" height="120">
-                <img src="css/img/logo_administracion.webp" alt="Administración de la universidad autónoma de sinaloa 2025" height="120">
+                <img src="css/img/logo_fce.png" alt = "Logo de la facultad de ciencias de la educación" height="120" class="imgFacultad">
+                <img src="css/img/logo_administracion.webp" alt="Administración de la universidad autónoma de sinaloa 2025" height="120" class="imgVision">
             </div>
         </div>
         <div class="containersubtitulo">
@@ -31,6 +31,15 @@
                 </div>
             </div>
         </div>
+
+        <div id="menuToggle">
+            <input id="checkbox" type="checkbox">
+            <label class="toggle" for="checkbox">
+              <div class="bar bar--arriba"></div>
+              <div class="bar bar--medio"></div>
+              <div class="bar bar--abajo"></div>
+            </label>
+          </div>
     </div>
 
     <nav class="menu">
@@ -45,6 +54,8 @@
         </ul>
     </nav>
 
+    
+
     <!-- Banner de la página -->
     <div class="banner">
 
@@ -57,7 +68,7 @@
             <div class="noticia">
                 <img src="css/img/noticia 1.jpg" alt="Noticia 1">
                 <div class="texto-noticia">
-                    <p>Comunicado Institucional.</p>
+                    <p>Comunicado Institucional</p>
                     <p>Ante las diversas imágenes y videos que circulan a través de las redes sociales. </p>
                     <a onClick="location.reload()"> Ver noticia</a>
                 </div>
@@ -123,5 +134,7 @@
         <img src="css/img/administracion_blanco.png" alt="Administración de la universidad autónoma de sinaloa 2025" height="60">
     </footer>
 
+
+    <script src="js/eventos.js"></script>
 </body>
 </html>
