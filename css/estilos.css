@@ -173,7 +173,6 @@ font-weight: bold;
   padding: 10px;
   cursor: pointer;
   font-size: 2rem;
-  z-index: 10;
   border-radius: 5px;
 }
 
@@ -631,5 +630,8 @@ iframe {
   
   .img-hover-text{
     width: 400px;
+  }
+  .img-hover-text figcaption {
+    opacity: 1;
   }
 }
