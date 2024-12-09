@@ -9,18 +9,30 @@ checkbox.addEventListener('change', () => {
   if (checkbox.checked) {
     // Mostrar menú
     menu.style.display = 'flex'; 
-
-    li.forEach((objeto) => {
-      objeto.style.padding = '13px 30px'; 
-    });
   } else {
     // Ocultar menú
-    menu.style.display = 'none';
-    li.forEach((objeto) => {
-      objeto.style.padding = '0'; 
-    });
+    menu.style = 'none'
   }
 });
 
 
-document.ready
+let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+
+function moveSlide(step) {
+    currentIndex += step;
+
+    if (currentIndex < 0) {
+        currentIndex = totalItems - 1;
+    } else if (currentIndex >= totalItems) {
+        currentIndex = 0;
+    }
+
+    const track = document.querySelector('.carousel-track');
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+setInterval(() => {
+    moveSlide(1);
+}, 5000);

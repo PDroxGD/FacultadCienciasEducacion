@@ -23,9 +23,9 @@ body {
 
 .titulo {
   font-weight: 700;
-  font-size: xx-large;
+  font-size: x-large;
   width: 100%;
-  padding: 15px 0 0 50px;
+  padding: 15px 0 0 30px;
 }
 
 .containersubtitulo {
@@ -47,7 +47,6 @@ body {
   letter-spacing: 23px;
   text-align: center;
   margin-left: 15%;
-  /* transition: all 0.3s; */
 }
 
 .menu {
@@ -58,16 +57,18 @@ body {
   align-content: stretch;
   align-items: center;
   justify-content: center;
+  z-index: 1;
+  position: relative;
 }
 
-.menu ul {
+.menu > ul {
   display: flex;
   height: 40px;
   max-width: 1080px;
   padding: 0;
 }
 
-.menu ul li {
+.menu > ul > li {
   text-decoration: none;
   display: inline-block;
   padding: 10px 30px;
@@ -75,23 +76,115 @@ body {
   font-size: 14px;
 }
 
-.menu ul li:nth-child(1) {
+.menu > ul > li:nth-child(1) {
   border-left: 1px solid #ffffff;
 }
 
-.menu ul li:hover {
+.menu > ul > li:hover {
   background: #ad9716;
   cursor: pointer;
 }
 
-/* Banner de la página */
-.banner {
-  width: 100%;
-  height: 500px;
-  background-image: url("img/fondo_baner.jpeg");
-  background-size: cover;
-  background-position: center;
+
+.sub-menu{
+  display: none;
+  position: absolute;
+  width: auto;
+  background: #ad9716;
+  z-index: 3000;
+  margin-top: 13px;
+  margin-left: -30px;
+  border-radius: 0px 5px 5px 5px;
+  padding-right: 40px;
 }
+.sub-menu li{
+  display: block;
+  text-align: left;
+  margin: 10px 0px;
+  padding: 5px;
+}
+.sub-menu li:hover{
+font-weight: bold;
+}
+
+.menu ul li:hover > ul.sub-menu{
+  display: block;
+}
+
+/* Estilos del carrusel */
+.banner {
+  position: relative;
+  padding: 10px;
+  background-color: #f2f2f2;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container {
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+  position: relative;
+  height: 80%;
+  background-color: white;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  position: relative;
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-item .caption {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+/* Botones de navegación */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 2rem;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
 
 /* Estilo para el contenido de las noticias */
 .historial-noticias {
@@ -101,15 +194,15 @@ body {
 }
 
 .noticias {
-  display: flex;
-  justify-content: space-between;
-  gap: 5px;
+  display: flex ;
+  justify-content: center;
+  gap: 5%;
   padding: 20px;
 }
 
 .noticia {
   width: 25%;
-  max-height: 350px;
+  max-height: 450px;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 10px;
   display: flex;
@@ -122,16 +215,15 @@ body {
 
 .noticia img {
   width: 75%;
-  height: 50%;
-  margin-bottom: 20px;
+  height: 40%;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
 }
 
 .texto-noticia {
-  width: 75%;
+  width: 90%;
   height: 50%;
-  background-color: rgb(214, 207, 177, 0.8);
   padding: 10px;
   overflow-y: auto;
   scrollbar-width: thin;
@@ -139,19 +231,28 @@ body {
 }
 .texto-noticia p:nth-child(1) {
   font-weight: 600;
+  margin-bottom: 10px;
+}
+.texto-noticia p:nth-child(2) {
+  border-top: 2px solid #DDD;
+  padding-top: 10PX;
+  margin-top: 0;
+  font-size: 14PX;
 }
 
-.texto-noticia a {
+.noticia a {
   color: #ffffff;
   text-decoration: none;
   background-color: #1d71b8;
-  border-radius: 80px;
-  padding: 10px 20px;
+  border-radius: 20px;
+  padding: 5px 10px;
   display: inline-block;
   transition: all 0.3s ease-in-out;
   width: max-content;
+  font-size: medium;
+  margin-top: 10px;
 }
-.texto-noticia a:hover {
+.noticia a:hover {
   cursor: pointer;
   background-color: #175a92;
   transform: translateY(-5px);
@@ -161,6 +262,44 @@ body {
 .oferta-educativa {
   margin-top: 30px;
   text-align: center;
+}
+
+.imagenes-oferta{
+  display: flex  ;
+  margin-bottom: 15px;
+}
+
+.img-hover-text {
+  width: 25%;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.img-hover-text img {
+  width: 100%;
+  transition: .5s;
+  filter: brightness(90%);
+}
+
+.img-hover-text figcaption {
+  position: absolute;
+  width: 100%;
+  background: rgb(69 69 69 / 70%);
+  bottom: 1%;
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: .5s;
+}
+
+.img-hover-text:hover figcaption {
+  opacity: 1;
+}
+
+.img-hover-text:hover img {
+  filter: brightness(75%);
 }
 
 /* Sección de Redes Sociales */
@@ -331,15 +470,39 @@ iframe {
   .titulo {
     font-size: x-large;
   }
+  
 }
 
 @media only screen and (max-width: 920px) {
   .subtitulo {
     margin-left: 18%;
   }
-  .menu ul li {
+  .menu > ul > li {
     font-size: 12px;
     padding: 13px 30px;
+  }
+
+  .sub-menu{
+    padding: 5px;
+  }
+
+  .noticias{
+    gap: 15px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .noticia{
+    width: 75%;
+  }
+
+  .noticia img{
+    width: 60%;
+  }
+
+  .noticia a {
+    padding: 5px 10px;
   }
 }
 @media only screen and (max-width: 810px) {
@@ -357,6 +520,21 @@ iframe {
     font-size: 2.5vw;
     padding: 15px 0 0 5vw;
   }
+
+  .carousel-container {
+    height: 250px;
+}
+
+  .carousel-item .caption {
+      font-size: 0.7rem;
+      padding: 10px;
+  }
+
+  .carousel-button {
+    padding: 5px;
+    font-size: 1rem;
+  }
+
 }
 
 @media only screen and (max-width: 690px) {
@@ -412,18 +590,19 @@ iframe {
     display: none;
   }
 
-  .menu ul {
+  .menu > ul {
     flex-direction: column;
     width: fit-content;
     position: relative;
   }
 
-  .menu ul li {
+  .menu > ul > li {
     border-right: none;
     background: #dbc023;
     text-align: center;
     height: 10px;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   .menu ul li:nth-child(1) {
@@ -431,21 +610,10 @@ iframe {
     margin-top: 20px;
   }
 
-  .noticia{
-    max-height: 250px;
-  }
-
-  .texto-noticia p:nth-child(1){
-    font-size: x-small;
-  }
-
-  .texto-noticia p:nth-child(2){
-    font-size: xx-small;
-  }
-
-  .texto-noticia a {
-    padding: 5px 10px;
-    font-size: xx-small;
+  .sub-menu{
+    margin-left: 95px;
+    margin-top: -13px;
+    width: max-content;
   }
 
   #menuToggle {

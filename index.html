@@ -17,7 +17,7 @@
                 <img src="css/img/logo_uas.webp" alt="Logo universidad autónoma de sinaloa" height="150" class="imgUAS">
     
                 <div class="titulo">
-                    Facultad de Ciencias de la Educación <br>Extensión Mochis               
+                    Facultad de Ciencias de la <br>Educación Extensión Mochis               
                 </div>
     
                 <img src="css/img/logo_fce.png" alt = "Logo de la facultad de ciencias de la educación" height="120" class="imgFacultad">
@@ -45,12 +45,39 @@
     <nav class="menu">
         <ul>
             <li>Inicio</li>
-            <li>Nosotros</li>
+            <li>Nosotros
+                <ul class="sub-menu">
+                    <li>Historia</li>
+                    <li>Misión y visión</li>
+                    <li>Directorio</li>
+                    <li>Normatividad</li>
+                </ul>
+            </li>
             <li>Noticias</li>
-            <li>Oferta Educativa</li>
-            <li>Servicios</li>
+            <li>Oferta Educativa
+                <ul class="sub-menu">
+                    <li>Licenciatura</li>
+                    <li>Posgrado</li>
+                    <li>Educación continua</li>
+                </ul>
+            </li>
+            <li>Departamentos
+                <ul class="sub-menu">
+                    <li>Control escolar</li>
+                    <li>Tutorías</li>
+                    <li>Servicio social</li>
+                    <li>Vinculación</li>
+                    <li>Titulación</li>
+                    <li>Prácticas profesionales</li>
+                </ul>
+            </li>
             <li>Contacto</li>
-            <li>Ingreso</li>
+            <li>Ingreso
+                <ul class="sub-menu">
+                    <li>Portal de alumnos</li>
+                    <li>Aula virtual</li>
+                </ul>
+            </li>
         </ul>
     </nav>
 
@@ -58,7 +85,30 @@
 
     <!-- Banner de la página -->
     <div class="banner">
-
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-item">
+                    <img src="css/img/carousel 1.jpg" alt="carousel 1">
+                    <div class="caption">
+                        Llama Candelario Ortiz a optimizar los recursos de la UAS en tiempos de austeridad, con planeación, transparencia y rendición de cuentas.
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="css/img/carousel 2.jpg" alt="carousel 2">
+                    <div class="caption">
+                        La UAS retomó la inquietud de su comunidad ante los hechos violentos en la Zona Centro y por ello decidió llevar a cabo las clases de manera virtual.
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="css/img/carousel 3.jpg" alt="carousel 3">
+                    <div class="caption">
+                        Investigación de estudiantes de la UAS revela estrategias de precios en El Buen Fin, con aumentos durante el sábado con respecto a los otros días.
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
     </div>
 
     <!-- Historial de noticias -->
@@ -70,8 +120,8 @@
                 <div class="texto-noticia">
                     <p>Comunicado Institucional</p>
                     <p>Ante las diversas imágenes y videos que circulan a través de las redes sociales. </p>
-                    <a onClick="location.reload()"> Ver noticia</a>
                 </div>
+                <a onClick="location.reload()"> Ver nota completa</a>
             </div>
 
             <div class="noticia">
@@ -79,8 +129,8 @@
                 <div class="texto-noticia">
                     <p>Programa Institucional De Tutorías Plan De AcciónTutorial</p>
                     <p>Hoy más que nunca, si tienes dificultades académicas, estamos para apoyarte, con toda confianza acércate al Departamento de Tutorías, estamos para ayudarte.</p>
-                    <a onClick="location.reload()"> Ver noticia</a>
                 </div>
+                <a href="https://dcs.uas.edu.mx/noticias" target="_blank"> Ver nota completa</a>
             </div>
 
             <div class="noticia">
@@ -88,23 +138,47 @@
                 <div class="texto-noticia">
                     <p>Con ponencias enfocadas a la prevención de adicciones, la UAS pone en marcha con AA y profesionales de la salud el Foro sobre Alcoholismo</p>
                     <p>Como la institución socialmente responsable que es, la Universidad Autónoma de Sinaloa (UAS) trabaja arduamente en formar alumnos íntegros capaces de tomar de decisiones que impactan en su vida, por ello, desde la alianza entre la Unidad de Bienestar Universitario (UBU) y la Central Mexicana de Servicios Generales de Alcohólicos Anónimos AC.</p>
-                    <a onClick="location.reload()"> Ver noticia</a>
                 </div>
+                <a href="https://dcs.uas.edu.mx/noticias" target="_blank"> Ver nota completa</a>
             </div>
         </div>
         <!--boton de ver mas noticias-->
-        <a class="btn" onClick="location.reload()">Ver todas las noticias</a>
+        <a class="btn" href="https://dcs.uas.edu.mx/noticias" target="_blank">Ver noticias anteriores</a>
     </div>
 
     <!-- Oferta Educativa -->
     <div class="oferta-educativa">
         <h2>OFERTA EDUCATIVA</h2>
-        <html lang="es">
 
-        <div class="video-container">
-            <iframe width="1080" height="608" src="https://www.youtube.com/embed/uvaT84a-x9o" title="Nueva oferta educativa ofrece la UAS para el Ciclo Escolar 2023-2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="imagenes-oferta">
+            <a class="img-hover-text" href="https://carreras.uas.edu.mx/Ciencias_de_la_Educacion.html" target="_blank"> 
+  
+                <img src="css/img/cienciasdelaeducacion.jpg" alt="Ciencias de la educación">
+                
+                <figcaption>
+                  <p>Licenciatura en Ciencias de la Educación</p>
+                </figcaption>
+                
+            </a>
+            <a class="img-hover-text" href="https://carreras.uas.edu.mx/Artes_Escenicas.html" target="_blank">
+  
+                <img src="css/img/artesescenicas.jpg" alt="Artes Escénicas">
+                
+                <figcaption>
+                  <p>Licenciatura en Artes Escénicas</p>
+                </figcaption>
+            
+            </a>
+            <a class="img-hover-text" href="https://carreras.uas.edu.mx/Musica.html" target="_blank"> 
+  
+                <img src="css/img/musica_nvo.jpg" alt="Música">
+                
+                <figcaption>
+                  <p>Licenciatura en Música</p>
+                </figcaption>
+            </a>
         </div>
-    
+        <a class="btn" href="https://carreras.uas.edu.mx/" target="_blank">Ver más ofertas</a>
     </div>
     <!-- Redes Sociales -->
     <div class="redes-sociales">
@@ -112,7 +186,11 @@
         <p>Sigue nuestra redes sociales para más información</p>
 
         <div class="redes">
-            <a href="https://www.facebook.com/fefydeextmochis?locale=es_LA"><img src = "css/img/logo_fb.png" alt ="Logo Facebook"></a>
+            <a href="https://www.facebook.com/fefydeextmochis?locale=es_LA" target="_blank"><img src = "css/img/logo_fb.png" alt ="Logo Facebook"></a>
+        </div>
+
+        <div class="video-container">
+            <iframe width="1080" height="608" src="https://www.youtube.com/embed/uvaT84a-x9o" title="Nueva oferta educativa ofrece la UAS para el Ciclo Escolar 2023-2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </div>
 
