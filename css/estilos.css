@@ -623,4 +623,13 @@ iframe {
   #menuToggle {
     display: block;
   }
+
+  .imagenes-oferta{
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .img-hover-text{
+    width: 400px;
+  }
 }
