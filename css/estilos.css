@@ -605,7 +605,7 @@ iframe {
     flex-direction: column;
   }
 
-  .menu ul li:nth-child(1) {
+  .menu > ul > li:nth-child(1) {
     border-left: none;
     margin-top: 20px;
   }
@@ -614,6 +614,10 @@ iframe {
     margin-left: 95px;
     margin-top: -13px;
     width: max-content;
+  }
+
+  .sub-menu li{
+    margin: 5px 0px;
   }
 
   #menuToggle {
