@@ -313,6 +313,15 @@ font-weight: bold;
   height: 50px;
 }
 
+.social-section {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
 /* Mapa de Google */
 .mapa-de-google {
   display: grid;
